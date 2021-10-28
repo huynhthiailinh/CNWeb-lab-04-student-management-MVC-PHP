@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Thông tin chi tiết sinh viên</div>
+        <div class="menu">
+            <ul>
+            <?php
+                echo "<li>Tên: " . $student->name . "</li>";
+                echo "<li>Tuổi: " . $student->age . "</li>";
+                echo "<li>Trường Đại học: " . $student->university . "</li>";
+            ?>
+            </ul>
+        </div>
+        <p class="return"><a href="javascript:history.back()">Trở về</a></p>
+    </div>
+</body>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFF3E4;
+        height: 100vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #483434;
+    }
+
+    .title {
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .menu {
+        margin-top: 20px;
+    }
+
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        width: 185px;
+        list-style-type: none;
+    }
+
+    .menu li {
+        width: 470px;
+        background-color: #EED6C4;
+        padding-left: 10px;
+        height: 52px;
+        line-height: 52px;
+    }
+    
+    .menu ul li a {
+        color: inherit;
+        display: inline-block;
+        text-decoration: none;
+        padding: 10.5px 11px;
+        text-align: center;
+    }
+
+    .return {
+      padding: 8px;
+      background-color: #6b4f4f;
+      cursor: pointer;
+      color: #fff3e4;
+      font-weight: 700;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 12px;
+      width: 70px;
+      text-align: center;
+    }
+    
+    .return a {
+        text-decoration: none;
+        color: inherit;
+    }
+</style>
+</html>

@@ -13,7 +13,7 @@
             <ul>
             <?php
             for ($i=1; $i <= sizeof($studentList); $i++) {
-                echo "<li>" . $i . ". <a href='?studentId=" . $studentList[$i]->id . "'>" . $studentList[$i]->name . "</a></li>";
+                echo "<li>" . $i . ". <a href='?view=1&studentId=" . $studentList[$i]->id . "'>" . $studentList[$i]->name . "</a></li>";
             }
             ?>
             </ul>

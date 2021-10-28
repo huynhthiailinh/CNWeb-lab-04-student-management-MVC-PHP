@@ -13,7 +13,7 @@
             <ul>
             <?php
             for ($i=1; $i <= sizeof($studentList); $i++) {
-                echo "<li>" . $i . ". <a href='?update=1&studentId=" . $studentList[$i]->id . "'>" . $studentList[$i]->name . "</a></li>";
+                echo "<li><span>" . $i . " " . $studentList[$i]->name . "</span><a href='?delete=1&studentId=" . $studentList[$i]->id . "'>Xóa</a></li>";
             }
             ?>
             </ul>
@@ -51,18 +51,29 @@
         width: 350px;
         background-color: #EED6C4;
         padding-left: 10px;
-    }
-    
-    .menu ul li a {
-        color: inherit;
-        display: inline-block;
-        text-decoration: none;
-        padding: 10.5px 11px;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .menu ul li:hover {
+    .menu li:hover {
         color: #FFF3E4;
         background-color: #6B4F4F;
+    }
+
+    .menu li span {
+        padding: 10.5px 11px;
+    }
+    
+    .menu li a {
+        display: none;
+        color: #EED6C4;
+        text-decoration: none;
+        padding: 10.5px 11px;
+        font-weight: bold;
+    }
+
+    .menu li:hover a {
+        display: block;
     }
 
     .return {

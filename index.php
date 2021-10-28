@@ -13,11 +13,11 @@
         <div class="title">Quản lý sinh viên</div>
         <div class="menu">
             <ul>
-                <li><a href="controller/C_Student.php">Xem sinh viên</a></li>
-                <li><a href="controller/C_Student.php?mod1='1'">Thêm sinh viên</a></li>
-                <li><a href="controller/C_Student.php?mod2='1'">Cập nhật sinh viên</a></li>
-                <li><a href="controller/C_Student.php?mod3='1'">Xóa sinh viên</a></li>
-                <li><a href="controller/C_Student.php?mod4='1'">Tìm kiếm sinh viên</a></li>
+                <li><a href="controller/C_Student.php?mod1='1'">Xem sinh viên</a></li>
+                <li><a href="controller/C_Student.php?mod2='1'">Thêm sinh viên</a></li>
+                <li><a href="controller/C_Student.php?mod3='1'">Cập nhật sinh viên</a></li>
+                <li><a href="controller/C_Student.php?mod4='1'">Xóa sinh viên</a></li>
+                <li><a href="controller/C_Student.php?mod5='1'">Tìm kiếm sinh viên</a></li>
             </ul>
         </div>
     </div>
@@ -50,6 +50,11 @@
 
     .menu li {
         width: 310px;
+        border-bottom: #483434 solid 1px;
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
     }
 
     .menu ul li a {

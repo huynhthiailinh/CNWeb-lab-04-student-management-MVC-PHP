@@ -36,5 +36,24 @@ class Model_Student
         mysqli_select_db($link, "dulieu");
         $sql = "insert into student values(NULL, '$name', $age, '$university')";
         $result = mysqli_query($link, $sql);
+        mysqli_close($link);
+    }
+
+    public function updateStudent($id, $name, $age, $university)
+    {
+        $link = mysqli_connect("localhost", "root", "") or die("Khong the ket noi den CSDL MySQL");
+        mysqli_select_db($link, "dulieu");
+        $sql = "update student set name = '$name', age = $age, university = '$university' where id = $id";
+        $result = mysqli_query($link, $sql);
+        mysqli_close($link);
+    }
+
+    public function deleteStudent($id)
+    {
+        $link = mysqli_connect("localhost", "root", "") or die("Khong the ket noi den CSDL MySQL");
+        mysqli_select_db($link, "dulieu");
+        $sql = "delete from student where id = $id";
+        $result = mysqli_query($link, $sql);
+        mysqli_close($link);
     }
 }

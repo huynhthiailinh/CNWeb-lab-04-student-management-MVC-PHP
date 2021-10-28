@@ -8,22 +8,28 @@
   </head>
   <body>
     <div class="wrapper">
-      <form class="form" action="C_Student.php?update-student='1'" method="post">
+      <?php echo "<form class='form' action='C_Student.php?save=1&studentId=" . $student->id . "' method='post'>" ?>
         <div class="title">Thêm sinh viên</div>
         <div class="txt_input">
           <div>Tên sinh viên</div>
-          <input class="txt" type="text" name="name" id="" />
+          <?php
+          echo "<input class='txt' type='text' name='name' value=$student->name
+          />" ?>
         </div>
         <div class="txt_input">
           <div>Tuổi</div>
-          <input class="txt" type="text" name="age" id="" />
+          <?php
+          echo "<input class='txt' type='text' name='age' value=$student->age
+          />" ?>
         </div>
         <div class="txt_input">
           <div>Trường Đại học</div>
-          <input class="txt" type="text" name="university" id="" />
+          <?php
+          echo "<input class='txt' type='text' name='university' value=$student->university
+          />" ?>
         </div>
         <div class="btn_input">
-          <input class="btn" type="submit" value="Thêm" />
+          <input class="btn" type="submit" value="Lưu" />
           <input class="btn" type="reset" value="Đặt lại" />
           <p class="btn"><a href="../index.php">Trở về</a></p>
         </div>

@@ -23,7 +23,7 @@ class Ctrl_Student
             $name = $_POST['name'];
             $age = $_POST['age'];
             $university = $_POST['university'];
-            $student = $modelStudent->addStudent($name, $age, $university);
+            $modelStudent->addStudent($name, $age, $university);
             $studentList = $modelStudent->getAllStudents();
             include_once("../view/StudentListForView.html");
         }
@@ -58,6 +58,17 @@ class Ctrl_Student
             $modelStudent->deleteStudent($_GET['studentId']);
             $studentList = $modelStudent->getAllStudents();
             include_once("../view/StudentListForDelete.html");
+        }
+
+        //Tìm kiếm sinh viên
+        if (isset($_GET['mod5'])) {
+            include_once("../view/SearchStudent.html");
+        } else if (isset($_GET['search'])) {
+            $modelStudent = new Model_Student();
+            $key = $_POST['properties'];
+            $value = $_POST['value'];
+            $studentList = $modelStudent->searchStudent($key, $value);
+            include_once("../view/StudentListForView.html");
         }
     }
 }
